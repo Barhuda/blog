@@ -1,6 +1,6 @@
 html {
-  background-color: #8be383;
-  background-image: -webkit-linear-gradient(65deg, #8be383 50%, #1d6936 50%);
+  background-color: #264653;
+  background-image: -webkit-linear-gradient(65deg, #2A9D8F 50%, #264653 50%);
   min-height: 1000px;
   font-family: "Segoe UI", Arial, sans-serif;
 }
@@ -19,7 +19,7 @@ h1 {
 }
 
 #heading {
-  background-color: #159e27;
+  background-color: #2A9D8F;
   text-align: center;
 }
 
