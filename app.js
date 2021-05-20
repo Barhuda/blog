@@ -106,7 +106,7 @@ app.post("/", function (req, res) {
     let newItem = Item({ name: req.body.newItem });
     let listName = req.body.list;
 
-    if (listName === "Today" || listName === "Favicon.ico") {
+    if (listName === "Today") {
         newItem.save();
         res.redirect("/");
     } else {
@@ -140,6 +140,12 @@ app.get("/:customListName", function (req, res) {
 
     List.findOne({ name: customListName }, function (err, results) {
         if (!results) {
+            if (customListName !== "Favicon.ico") {
+                const list = new List({
+                    name: customListName,
+                    items: defaultItems
+                });
+            }
             const list = new List({
                 name: customListName,
                 items: defaultItems
