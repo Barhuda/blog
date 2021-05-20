@@ -106,7 +106,7 @@ app.post("/", function (req, res) {
     let newItem = Item({ name: req.body.newItem });
     let listName = req.body.list;
 
-    if (listName === "Today") {
+    if (listName === "Today" || listName === "favicon.ico") {
         newItem.save();
         res.redirect("/");
     } else {
